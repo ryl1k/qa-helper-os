@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "QA Clipboard Helper",
+  "version": "1.0.0",
+  "permissions": [ "scripting", "activeTab", "clipboardWrite" ],
+  "host_permissions": [ "<all_urls>" ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "find_answer": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+H",
+        "mac": "Command+Shift+H"
+      },
+      "description": "Find answer and copy to clipboard"
+    }
+  }
+}
